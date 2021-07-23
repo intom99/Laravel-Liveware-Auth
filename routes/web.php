@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::group(['middleware' => 'guest'], function () {
+    // Register
+    Route::livewire('/register', 'auth.register')->layout('layouts.app')->name('auth.register');
 });
