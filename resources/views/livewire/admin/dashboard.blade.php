@@ -8,11 +8,11 @@
                         <hr>
 
                         <ul class="list-group">
-                            <li class="list-group-item"><i class="fas fa-tachometer-alt"></i>Dashboard</li>
-                            <li class="list-group-item"><i class="fas fa-tags"></i>Tags</li>
-                            <li class="list-group-item"><i class="fas fa-folder"></i>Categories</li>
-                            <li class="list-group-item"><i class="fas fa-book"></i>Posts</li>
-                            <li class="list-group-item active"><i class="fas fa-sign-out-alt"></i>Logout</li>
+                            <li class="list-group-item"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                            <li class="list-group-item"><i class="fas fa-tags"></i> Tags</li>
+                            <li class="list-group-item"><i class="fas fa-folder"></i> Categories</li>
+                            <li class="list-group-item"><i class="fas fa-book"></i> Posts</li>
+                            <livewire:admin.logout/>
                         </ul>
                     </div>
                 </div>
