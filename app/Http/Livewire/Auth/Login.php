@@ -18,7 +18,9 @@ class Login extends Component
             'password' => 'required'
         ]);
 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+        if (Auth::attempt([
+            'email' => $this->email, 'password' => $this->password
+        ])) {
             return redirect()->route('admin.dashboard');
         } else {
             session()->flash('error', 'incorrect email or password has wrong!!');
