@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::group(['middleware' => 'guest'], function () {
-    // Register
+    // Register page
     Route::livewire('/register', 'auth.register')->layout('layouts.app')->name('auth.register');
+    // login page
+    Route::livewire('/login', 'auth.login')->layout('layouts.app')->name('auth.login');
+    // dashboard page
+    Route::livewire('/admin/dashboard', 'admin.dashboard')->layout('layouts.app')->name('admin.dashboard');
 });
