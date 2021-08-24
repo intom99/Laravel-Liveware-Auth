@@ -18,6 +18,9 @@ Route::group(['middleware' => 'guest'], function () {
     Route::livewire('/register', 'auth.register')->layout('layouts.app')->name('auth.register');
     // login page
     Route::livewire('/login', 'auth.login')->layout('layouts.app')->name('auth.login');
+});
+
+Route::group(['middleware' => 'auth'], function () {
     // dashboard page
     Route::livewire('/admin/dashboard', 'admin.dashboard')->layout('layouts.app')->name('admin.dashboard');
 });
