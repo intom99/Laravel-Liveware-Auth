@@ -25,11 +25,11 @@ class Register extends Component
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
-            'password' => $this->password
+            'password' => bcrypt($this->password)
         ]);
 
         if ($user) {
-            session()->flash('success', 'Register Success');
+            session()->flash('success', 'Register Success!.');
             return redirect()->route('auth.login');
         }
     }
